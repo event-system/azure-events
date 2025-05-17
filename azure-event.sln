@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "azure-event", "azure-event.csproj", "{9440616F-F417-4303-9153-A8B9B6305358}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9440616F-F417-4303-9153-A8B9B6305358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9440616F-F417-4303-9153-A8B9B6305358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9440616F-F417-4303-9153-A8B9B6305358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9440616F-F417-4303-9153-A8B9B6305358}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B69AA8A-1048-4B77-9E79-3FA25C7CE069}
+	EndGlobalSection
+EndGlobal
