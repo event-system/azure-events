@@ -5,40 +5,40 @@ using Microsoft.Extensions.Logging;
 
 namespace azure_event
 {
-    public class Bookings
+    public class Events
     {
-        private readonly ILogger<Bookings> _logger;
+        private readonly ILogger<Events> _logger;
 
-        public Bookings(ILogger<Bookings> logger)
+        public Events(ILogger<Events> logger)
         {
             _logger = logger;
         }
 
-        [Function("Bookings")]
+        [Function("Events")]
         public IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequest req)
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
-            var bookings = new[]
+            var events = new[]
                         {
-                new Booking(
+                new Event(
                     "Tech Future Expo",
-                    "June 1, 2029 — 10:00 AM",
+                    "June 1, 2029 â€” 10:00 AM",
                     "Silicon Valley, San Jose, CA",
                     "Technology",
                     "Active",
                     80
                 ),
-                new Booking(
+                new Event(
                     "AI World Summit",
-                    "July 15, 2029 — 9:00 AM",
+                    "July 15, 2029 â€” 9:00 AM",
                     "Boston Convention Center, Boston, MA",
                     "Artificial Intelligence",
                     "Active",
                     120
                 ),
-                new Booking(
+                new Event(
                     "Green Energy Conference",
-                    "August 20, 2029 — 11:00 AM",
+                    "August 20, 2029 â€” 11:00 AM",
                     "Austin Energy Center, Austin, TX",
                     "Environment",
                     "Cancelled",
@@ -46,12 +46,12 @@ namespace azure_event
                 )
             };
 
-            return new OkObjectResult(bookings);
+            return new OkObjectResult(events);
         }
     }
 }
 
-public class Booking
+public class Event
 {
     public string Name { get; set; }
     public string DateTime { get; set; }
@@ -60,7 +60,7 @@ public class Booking
     public string Status { get; set; }
     public int Attendees { get; set; }
 
-    public Booking(string name, string dateTime, string location, string category, string status, int attendees)
+    public Event(string name, string dateTime, string location, string category, string status, int attendees)
     {
         Name = name;
         DateTime = dateTime;
